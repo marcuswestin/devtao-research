@@ -1,0 +1,9 @@
+dev:
+    docker-compose up --remove-orphans --build
+
+dev-single:
+    docker-compose up --remove-orphans --build --scale server=1
+
+restart:
+    docker-compose down
+    just dev
