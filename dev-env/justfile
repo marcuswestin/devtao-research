@@ -1,8 +1,13 @@
 dev: _deps
+    bunx concurrently \
+        "just _run-servers" \
+        "just _run-web-client" \
+
+_run-servers:
     docker-compose up --remove-orphans --build
 
-dev-single: _deps
-    docker-compose up --remove-orphans --build --scale server=1
+_run-web-client:
+    cd apps/web-client && bun run dev
 
 restart: _deps
     docker-compose down
@@ -10,3 +15,4 @@ restart: _deps
 
 _deps:
     mise install
+    bun install -g concurrently
