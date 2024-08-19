@@ -6,7 +6,7 @@ const random = Math.random();
 const server = Bun.serve({
     port: PORT,
     fetch() {
-        return new Response("Welcome to Bun 7! " + random);
+        return new Response("Welcome to Bun 8! " + random);
     },
 });
 

@@ -1,9 +1,6 @@
 FROM oven/bun:1 as build
 
-# RUN apt-get update
-# RUN apt-get install -y just
-
-RUN curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to /usr/bin
+# RUN curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to /usr/bin
 
 WORKDIR /usr/src/apps/server
 

@@ -5,9 +5,12 @@ Research into the basics of a repeatable dev env, to be formed with a stackfile
 
 ## Setup
 
-     curl https://mise.run | sh
-     mise activate
-     mise install
+    ./setup.sh
+
+
+## Run stack
+
+    just dev
 
 
 ### TODO

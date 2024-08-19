@@ -1,9 +1,12 @@
-dev:
+dev: _deps
     docker-compose up --remove-orphans --build
 
-dev-single:
+dev-single: _deps
     docker-compose up --remove-orphans --build --scale server=1
 
-restart:
+restart: _deps
     docker-compose down
     just dev
+
+_deps:
+    mise install
